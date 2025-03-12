@@ -3,170 +3,246 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>۶ نکته برای گوش دادن فعال</title>
+        <title>نکات گوش دادن فعال</title>
         <style>
+            @import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap");
+
             :root {
                 --primary: #4a6fa5;
                 --secondary: #ff6b6b;
                 --highlight: #47b8c5;
                 --dark: #333;
                 --light: #f9f9f9;
-                --gradient: linear-gradient(135deg, var(--primary), var(--highlight));
+                --white: #ffffff;
+                --gradient: linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--highlight)
+                );
             }
-            body {
-                font-family: 'Tahoma', 'Arial', sans-serif;
-                line-height: 1.6;
+
+            * {
+                box-sizing: border-box;
                 margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: "Vazirmatn", sans-serif;
+                background-color: #f0f0f0;
+                direction: rtl;
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 padding: 20px;
-                max-width: 800px;
+            }
+
+            .circular-infographic {
+                position: relative;
+                width: 800px;
+                height: 800px;
                 margin: 0 auto;
-                background-color: var(--light);
-                color: var(--dark);
-                text-align: right;
             }
-            h1 {
-                text-align: center;
-                font-size: 24px;
-                margin-bottom: 30px;
-                color: white;
+
+            .center-circle {
+                position: absolute;
+                width: 200px;
+                height: 200px;
                 background: var(--gradient);
+                border-radius: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
                 padding: 20px;
-                border-radius: 10px;
-                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-                text-transform: uppercase;
-                letter-spacing: 1px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                z-index: 10;
             }
-            .tips {
-                margin-bottom: 30px;
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 15px;
-            }
+
             .tip {
-                margin-bottom: 15px;
+                position: absolute;
+                width: 200px;
                 background: white;
                 padding: 15px;
-                border-radius: 8px;
-                box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-                border-right: 4px solid var(--primary);
-                border-left: none;
-                transition: transform 0.3s ease;
+                border-radius: 15px;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
             }
+
             .tip:hover {
-                transform: translateY(-3px);
+                transform: scale(1.05);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                z-index: 5;
             }
-            .tip strong {
+
+            .tip h3 {
                 color: var(--primary);
-            }
-            .sections {
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
-            }
-            .section {
-                width: 48%;
-                margin-bottom: 20px;
-                background: white;
-                padding: 20px;
-                border-radius: 8px;
-                box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-            }
-            h2 {
-                font-size: 18px;
-                margin-bottom: 15px;
-                color: white;
-                background: var(--secondary);
-                padding: 10px 15px;
-                border-radius: 5px;
-                display: inline-block;
-                margin-top: 0;
-            }
-            .section:nth-child(2) h2 {
-                background: var(--highlight);
-            }
-            ul {
-                padding-right: 20px;
-                padding-left: 0;
-            }
-            li {
                 margin-bottom: 10px;
-                position: relative;
-                list-style-type: none;
-                padding-right: 25px;
-                padding-left: 0;
+                font-size: 16px;
             }
-            li::before {
-                content: "✓";
+
+            .tip p {
+                font-size: 14px;
+                color: var(--dark);
+            }
+
+            .tip-1 {
+                top: 50px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-top: 4px solid var(--primary);
+            }
+
+            .tip-2 {
+                top: 150px;
+                right: 50px;
+                border-right: 4px solid var(--secondary);
+            }
+
+            .tip-3 {
+                top: 50%;
+                right: 20px;
+                transform: translateY(-50%);
+                border-right: 4px solid var(--highlight);
+            }
+
+            .tip-4 {
+                bottom: 150px;
+                right: 50px;
+                border-bottom: 4px solid var(--primary);
+            }
+
+            .tip-5 {
+                bottom: 50px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-bottom: 4px solid var(--secondary);
+            }
+
+            .tip-6 {
+                bottom: 150px;
+                left: 50px;
+                border-left: 4px solid var(--highlight);
+            }
+
+            .tip-7 {
+                top: 50%;
+                left: 20px;
+                transform: translateY(-50%);
+                border-left: 4px solid var(--primary);
+            }
+
+            .tip-8 {
+                top: 150px;
+                left: 50px;
+                border-top: 4px solid var(--secondary);
+            }
+
+            .connector {
                 position: absolute;
-                right: 0;
-                left: auto;
-                color: var(--primary);
-                font-weight: bold;
+                background-color: rgba(74, 111, 165, 0.3);
+                pointer-events: none;
+                z-index: 1;
             }
-            li strong {
-                color: var(--secondary);
-            }
-            @media (max-width: 650px) {
-                .section {
+
+            /* Responsive adjustments */
+            @media (max-width: 850px) {
+                .circular-infographic {
                     width: 100%;
+                    height: auto;
+                    margin-top: 1200px;
+                }
+
+                .center-circle {
+                    position: relative;
+                    margin: 0 auto 30px;
+                    transform: none;
+                    top: 0;
+                    left: 0;
+                }
+
+                .tip {
+                    position: relative;
+                    width: 80%;
+                    max-width: 350px;
+                    margin: 15px auto;
+                    top: auto;
+                    left: auto;
+                    right: auto;
+                    bottom: auto;
+                    transform: none;
+                }
+
+                .connector {
+                    display: none;
                 }
             }
         </style>
     </head>
     <body>
-        <h1>۶ نکته برای گوش دادن فعال</h1>
+        <div class="circular-infographic">
+            <div class="center-circle">۶ نکته برای گوش دادن فعال</div>
 
-        <div class="tips">
-            <div class="tip">
-                <strong>نکته ۱:</strong> توجه کامل خود را به گوینده بدهید.
-            </div>
-            <div class="tip">
-                <strong>نکته ۲:</strong> پاسخی صادقانه بدهید که به گوینده نشان دهد شما به حرف‌هایش گوش می‌دهید.
-            </div>
-            <div class="tip">
-                <strong>نکته ۳:</strong> هنگامی که گوینده مکث می‌کند، یادداشت‌های ذهنی بردارید تا جزئیات مهم را به یاد داشته باشید.
-            </div>
-            <div class="tip">
-                <strong>نکته ۴:</strong> هنگام تهیه پاسخ، ارتباط احساسی گوینده با موضوع را در نظر بگیرید.
-            </div>
-            <div class="tip">
-                <strong>نکته ۵:</strong> قبل از پاسخ دادن به آنچه گوینده گفته است، مکث کنید و پاسخی مناسب تهیه کنید.
-            </div>
-            <div class="tip">
-                <strong>نکته ۶:</strong> برای آشنایی بیشتر با دیدگاه گوینده، سؤالات واقعی بپرسید.
-            </div>
-        </div>
-
-        <div class="sections">
-            <div class="section">
-                <h2>از این موانع اجتناب کنید</h2>
-                <ul>
-                    <li>
-                        <strong>حواس‌پرتی‌ها:</strong> تلفن خود را دور از دید نگه دارید.
-                    </li>
-                    <li>
-                        <strong>مشغول شدن ذهن:</strong> با گوش دادن فعال در مکالمه درگیر بمانید، به جای اینکه به فکر شام شب باشید.
-                    </li>
-                    <li>
-                        <strong>تمرکز فقط بر حقایق:</strong> به دیدگاه گوینده نیز توجه کنید.
-                    </li>
-                    <li>
-                        <strong>توجه به نحوه صحبت کردن:</strong> به آنچه گفته می‌شود توجه کنید، نه به نحوه بیان آن.
-                    </li>
-                </ul>
+            <div class="tip tip-1">
+                <h3>نکته ۱</h3>
+                <p>توجه کامل خود را به گوینده بدهید.</p>
             </div>
 
-            <div class="section">
-                <h2>هوش هیجانی خود را تقویت کنید</h2>
-                <ul>
-                    <li>یاد بگیرید چگونه فضای اتاق را درک کنید.</li>
-                    <li>نیازهای دیگران را تفسیر کنید.</li>
-                    <li>خود را جای دیگران بگذارید.</li>
-                    <li>
-                        احساسات خود را در موقعیت‌های تنش‌زا کنترل کنید.
-                    </li>
-                    <li>هدف خود را رسیدن به توافق قرار دهید.</li>
-                </ul>
+            <div class="tip tip-2">
+                <h3>نکته ۲</h3>
+                <p>
+                    پاسخی صادقانه بدهید که به گوینده نشان دهد شما به حرف‌هایش
+                    گوش می‌دهید.
+                </p>
+            </div>
+
+            <div class="tip tip-3">
+                <h3>نکته ۳</h3>
+                <p>
+                    هنگامی که گوینده مکث می‌کند، یادداشت‌های ذهنی بردارید تا
+                    جزئیات مهم را به یاد داشته باشید.
+                </p>
+            </div>
+
+            <div class="tip tip-4">
+                <h3>نکته ۴</h3>
+                <p>
+                    هنگام تهیه پاسخ، ارتباط احساسی گوینده با موضوع را در نظر
+                    بگیرید.
+                </p>
+            </div>
+
+            <div class="tip tip-5">
+                <h3>نکته ۵</h3>
+                <p>
+                    قبل از پاسخ دادن به آنچه گوینده گفته است، مکث کنید و پاسخی
+                    مناسب تهیه کنید.
+                </p>
+            </div>
+
+            <div class="tip tip-6">
+                <h3>نکته ۶</h3>
+                <p>برای آشنایی بیشتر با دیدگاه گوینده، سؤالات واقعی بپرسید.</p>
+            </div>
+
+            <div class="tip tip-7">
+                <h3>موانع گوش دادن</h3>
+                <p>از عوامل حواس‌پرتی و مشغول شدن ذهن اجتناب کنید.</p>
+            </div>
+
+            <div class="tip tip-8">
+                <h3>هوش هیجانی</h3>
+                <p>
+                    خود را جای دیگران بگذارید و احساسات خود را در موقعیت‌های
+                    تنش‌زا کنترل کنید.
+                </p>
             </div>
         </div>
     </body>
