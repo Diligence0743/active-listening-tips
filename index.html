@@ -3,77 +3,172 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="۶ نکته مهم برای تقویت مهارت گوش دادن فعال و بهبود ارتباطات"
+        />
+        <meta
+            name="keywords"
+            content="گوش دادن فعال, مهارت ارتباطی, هوش هیجانی"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <title>نکات گوش دادن فعال</title>
         <style>
+            @import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap");
+
+            :root {
+                --primary-color: #4a6da7;
+                --secondary-color: #8a4baf;
+                --accent-color: #ff6b6b;
+                --light-bg: #f8f9fa;
+                --dark-text: #2d3748;
+                --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+                    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            }
+
             body {
-                font-family: "Tahoma", Arial, sans-serif;
+                font-family: "Vazirmatn", "Tahoma", Arial, sans-serif;
                 margin: 0;
-                padding: 20px;
+                padding: 30px;
                 max-width: 1200px;
                 margin: 0 auto;
                 text-align: right;
+                background: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
+                color: var(--dark-text);
+                line-height: 1.6;
             }
 
             .header {
                 text-align: center;
-                margin-bottom: 30px;
+                margin-bottom: 40px;
+                padding: 20px;
+                border-radius: 15px;
+                background: linear-gradient(
+                    135deg,
+                    var(--primary-color),
+                    var(--secondary-color)
+                );
+                box-shadow: var(--card-shadow);
             }
 
             h1 {
-                font-size: 32px;
-                color: #333;
+                font-size: 36px;
+                color: white;
+                margin: 0;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
             }
 
             .tips-container {
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 20px;
-                margin-bottom: 40px;
+                gap: 25px;
+                margin-bottom: 50px;
             }
 
             .tip {
-                background-color: #f5f5f5;
-                padding: 20px;
-                border-radius: 8px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                background-color: white;
+                padding: 25px;
+                border-radius: 15px;
+                box-shadow: var(--card-shadow);
+                transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease;
+                border-top: 4px solid var(--primary-color);
+            }
+
+            .tip:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15);
             }
 
             .tip h3 {
                 margin-top: 0;
-                color: #2c5282;
+                color: var(--primary-color);
+                border-bottom: 2px solid #f0f0f0;
+                padding-bottom: 10px;
+                font-size: 22px;
+            }
+
+            .tip p {
+                margin-top: 15px;
+                color: #4a5568;
+                font-size: 16px;
             }
 
             .sections-container {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                gap: 20px;
+                gap: 30px;
             }
 
             .section {
-                background-color: #f5f5f5;
-                padding: 20px;
-                border-radius: 8px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                background-color: white;
+                padding: 30px;
+                border-radius: 15px;
+                box-shadow: var(--card-shadow);
+            }
+
+            .section:first-child {
+                border-top: 4px solid var(--accent-color);
+            }
+
+            .section:last-child {
+                border-top: 4px solid var(--secondary-color);
             }
 
             .section h2 {
-                color: #2c5282;
+                color: var(--dark-text);
+                font-size: 24px;
+                margin-top: 0;
+                margin-bottom: 25px;
+                text-align: center;
+                padding-bottom: 10px;
+                border-bottom: 2px solid #f0f0f0;
             }
 
             .obstacle,
             .eq-item {
-                margin-bottom: 15px;
+                margin-bottom: 20px;
+                padding: 15px;
+                border-radius: 10px;
+                background-color: var(--light-bg);
+                transition: transform 0.2s ease;
             }
 
-            .obstacle strong,
-            .eq-item strong {
+            .obstacle:hover,
+            .eq-item:hover {
+                transform: translateX(-5px);
+            }
+
+            .obstacle strong {
                 display: block;
-                margin-bottom: 5px;
+                margin-bottom: 8px;
+                color: var(--accent-color);
+                font-size: 18px;
+            }
+
+            .eq-item p {
+                margin: 0;
+                position: relative;
+                padding-right: 20px;
+            }
+
+            .eq-item p:before {
+                content: "•";
+                position: absolute;
+                right: 0;
+                color: var(--secondary-color);
+                font-weight: bold;
             }
 
             @media (max-width: 768px) {
                 .sections-container {
                     grid-template-columns: 1fr;
+                }
+
+                body {
+                    padding: 15px;
                 }
             }
         </style>
@@ -81,103 +176,3 @@
     <body>
         <div class="header">
             <h1>۶ نکته برای گوش دادن فعال</h1>
-        </div>
-
-        <div class="tips-container">
-            <div class="tip">
-                <h3>نکته ۱</h3>
-                <p>توجه کامل خود را به گوینده بدهید.</p>
-            </div>
-
-            <div class="tip">
-                <h3>نکته ۲</h3>
-                <p>پاسخی صادقانه بدهید که گوینده احساس کند شنیده شده است.</p>
-            </div>
-
-            <div class="tip">
-                <h3>نکته ۳</h3>
-                <p>
-                    هنگامی که گوینده مکث می‌کند، یادداشت‌های ذهنی بردارید تا
-                    جزئیات مهم را خلاصه و به خاطر بسپارید.
-                </p>
-            </div>
-
-            <div class="tip">
-                <h3>نکته ۴</h3>
-                <p>
-                    هنگام تدوین پاسخ خود، ارتباط احساسی گوینده با موضوع را در
-                    نظر بگیرید.
-                </p>
-            </div>
-
-            <div class="tip">
-                <h3>نکته ۵</h3>
-                <p>
-                    قبل از پاسخ به گفته های گوینده مکث کنید و پاسخ مناسبی تنظیم
-                    کنید.
-                </p>
-            </div>
-
-            <div class="tip">
-                <h3>نکته ۶</h3>
-                <p>برای آشنایی بیشتر با دیدگاه گوینده، سؤالات واقعی بپرسید.</p>
-            </div>
-        </div>
-
-        <div class="sections-container">
-            <div class="section">
-                <h2>از این موانع اجتناب کنید</h2>
-
-                <div class="obstacle">
-                    <strong>حواس‌پرتی‌ها</strong>
-                    <p>تلفن خود را دور از دید نگه دارید.</p>
-                </div>
-
-                <div class="obstacle">
-                    <strong>مشغول شدن ذهن</strong>
-                    <p>
-                        با گوش دادن فعال به جای فکر کردن به اینکه برای شام چه
-                        بخورید، در مکالمه مشارکت داشته باشید.
-                    </p>
-                </div>
-
-                <div class="obstacle">
-                    <strong>تمرکز صرف بر حقایق</strong>
-                    <p>در نظر بگیرید که گوینده از کجا می‌آید.</p>
-                </div>
-
-                <div class="obstacle">
-                    <strong>تمرکز بر نحوه صحبت کردن</strong>
-                    <p>
-                        به جای اینکه چگونه گفته می‌شود، به آنچه گفته می‌شود توجه
-                        کنید.
-                    </p>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>هوش هیجانی خود را تقویت کنید</h2>
-
-                <div class="eq-item">
-                    <p>یاد بگیرید چگونه فضای یک اتاق را درک کنید.</p>
-                </div>
-
-                <div class="eq-item">
-                    <p>نیازهای دیگران را تفسیر کنید.</p>
-                </div>
-
-                <div class="eq-item">
-                    <p>خود را جای دیگران بگذارید.</p>
-                </div>
-
-                <div class="eq-item">
-                    <p>در موقعیت‌های پرتنش، احساسات خود را کنترل کنید.</p>
-                </div>
-
-                <div class="eq-item">
-                    <p>هدف خود را رسیدن به توافق قرار دهید.</p>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
